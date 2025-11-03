@@ -1,11 +1,11 @@
-# From Scalars to Curves: Generative Full-Response Modeling for Refractory Alloy Design
+# Data-driven design of Nb-W refractory alloys using Transformer-based stress-strain modeling
 
 This repository contains the code and related materials for the paper:
 
-**From Scalars to Curves: Generative Full-Response Modeling for Refractory Alloy Design**
+**Data-driven design of Nb-W refractory alloys using Transformer-based stress-strain modeling**
 
 ## Overview
 
-Materials research is increasingly driven by trajectory- or spectrum-like data—such as stress-strain curves, creep histories, and spectroscopic profiles—that encode rich physical information beyond scalar properties. However, conventional machine learning approaches typically reduce such data to point-wise predictions, overlooking their sequential and path-dependent nature.
+Generative AI provides a powerful route for predicting material behavior in data-scarce regimes, an especially pressing challenge for refractory alloys where extreme processing environments and high melting points hinder large-scale data collection. Here, we introduce a Transformer-based generative framework that models the entire deformation trajectory rather than focusing solely on isolated scalar properties (such as YS, UTS), by synthesizing full stress–strain curves of Nb–W-based refractory alloys. Applied to Nb521-derived systems, the model captures the sequential evolution of tensile deformation and accurately predicts elastic–plastic responses across a wide compositional and processing space.
 
 This repository supports the code in the study.
