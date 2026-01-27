@@ -69,7 +69,6 @@ The inference procedure is as follows:
    If you need to predict multiple alloys, simply append all new entries to the end of data.xlsx, keeping Paper_Num = 14 unchanged and incrementing Alloy_Num sequentially (e.g., 0, 1, 2, ..., m). Then set Alloy_Num_list = (0, m + 1).
 
 3. Before running inference, ensure that the parameter output_moe_weights in Args.py is set to True. Then execute the following command:
-4. 
 ```bash
 python predict.py
 ```
