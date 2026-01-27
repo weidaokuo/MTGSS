@@ -1,0 +1,9 @@
+lmdb==1.7.5
+numpy==2.4.1
+pandas==3.0.0
+safetensors==0.7.0
+scipy==1.17.0
+torch==2.8.0
+tqdm==4.67.1
+transformers==4.57.3
+triton==3.4.0
