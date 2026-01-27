@@ -25,9 +25,11 @@ from typing import Dict, Any
 from itertools import chain
 from collections import deque
 import pandas as pd
-
-
-
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="matplotlib")
 
 
 
@@ -178,9 +180,17 @@ class batch_processing(object):
         """       
         stacked_data = np.hstack(data_list)          
         denormalized_data = stacked_data * self.stress_std + self.stress_mean       
-        denormalized_data = denormalized_data.reshape(-1, 1)[:7680]   
-        strain_array = np.arange(0, 100, 0.004).reshape(-1, 1)[:7680]        
+        denormalized_data = denormalized_data.reshape(-1, 1)[:5000]   
+        strain_array = np.arange(0, 100, 0.004).reshape(-1, 1)[:5000]        
         data = np.hstack([strain_array, denormalized_data])
+        strain = data[:, 0]
+        stress = data[:, 1]
+        plt.figure(figsize=(8, 6))
+        plt.plot(strain, stress, marker='o', linestyle='-', color='b', linewidth=2)
+        plt.xlabel('Strain')
+        plt.ylabel('Stress')
+        plt.title('Stress-Strain Curve')
+        plt.savefig(f'{output_file}.png', dpi=300, bbox_inches='tight')
         np.savetxt(output_file, data)      
     
     
