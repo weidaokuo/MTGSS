@@ -1,1 +1,2 @@
 data.mdb filter=lfs diff=lfs merge=lfs -text
+data/lmdb_data/data.mdb filter=lfs diff=lfs merge=lfs -text
